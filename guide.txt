@@ -1,0 +1,16 @@
+using image.asset('src')
+    --add path into pubspec.yaml file
+    --like:
+            assets:    - assets/images/nature.jpeg
+    --then, add img path inplace of src
+
+using image.network('src')
+    --make sure the device is connected to network
+
+using image.file(new File('src'))
+    --add permission to AndroidManifest.xml file, before and outside the <application/> attribute
+    --like:
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    --then, import 'dart:io' library to use file class, like:
+            import 'dart:io' ;
+    --then, add img path inplace of src
