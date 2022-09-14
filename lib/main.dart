@@ -54,10 +54,31 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hey Stuti!!, your order is on its way."),
+        title: const Text("Order details"),
       ),
       body: Center(
-        child: Image.asset("assets/gifs/delivery-man.gif"),
+        child: Container(
+          color: Colors.pink[50],
+          margin: EdgeInsets.only(top: 10, bottom: 10),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          width: double.infinity,
+          height: 350,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "Hey Stuti!!, Your order is on the way",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              Image.asset("assets/gifs/delivery-man.gif")
+            ],
+          ),
+        ),
       ),
     );
   }
