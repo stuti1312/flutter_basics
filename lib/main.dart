@@ -50,13 +50,15 @@ class FirstPage extends StatelessWidget {
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            //this is to remove back button which is bydefault provided
-            // automaticallyImplyLeading:false,
-            ));
+      appBar: AppBar(
+        title: const Text("Hey Stuti!!, your order is on its way."),
+      ),
+      body: Center(
+        child: Image.asset("assets/gifs/delivery-man.gif"),
+      ),
+    );
   }
 }
